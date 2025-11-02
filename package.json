@@ -1,0 +1,37 @@
+{
+  "name": "edupath",
+  "version": "1.0.0",
+  "description": "Edupath - Next Js Online Courses & Education Template",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "@types/react-modal-video": "^1.2.3",
+    "@types/react-scroll": "^1.8.10",
+    "@types/tiny-slider-react": "^0.3.8",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-countup": "^6.5.3",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-icons": "^5.3.0",
+    "react-modal-video": "^2.0.2",
+    "react-scroll": "^1.9.0",
+    "react-type-animation": "^3.2.0",
+    "swiper": "^11.1.14",
+    "tiny-slider-react": "^0.5.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "sass": "^1.80.7",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
