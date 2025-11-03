@@ -1,107 +1,72 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
-  important: true,
   theme: {
-      screens: {
-          xs: "540px",
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-          '2xl': '1536px',
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#2563eb', // blue-600
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
+        secondary: {
+          DEFAULT: '#10b981', // green-600
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+        },
       },
-      container: {
-          center: true,
-          padding: {
-              DEFAULT: '12px',
-              sm: '1rem',
-              lg: '45px',
-              xl: '5rem',
-              '2xl': '13rem',
-          },
-
-      },
-
       fontFamily: {
-          'heading': ['"Poppins", sans-serif'],
-          'body': ['"Inter", sans-serif'],
+        sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
       },
-
-
-      extend: {
-          screens: {
-              lg_992: '992px',
-          },
-          colors: {
-              'dark': '#3c4858',
-              'black': '#161c2d',
-              'dark-footer': '#161c28',
-          },
-
-          boxShadow: {
-              sm: '0 2px 4px 0 rgb(60 72 88 / 0.15)',
-              DEFAULT: '0 0 3px rgb(60 72 88 / 0.15)',
-              md: '0 5px 13px rgb(60 72 88 / 0.20)',
-              lg: '0 10px 25px -3px rgb(60 72 88 / 0.15)',
-              xl: '0 20px 25px -5px rgb(60 72 88 / 0.1), 0 8px 10px -6px rgb(60 72 88 / 0.1)',
-              '2xl': '0 25px 50px -12px rgb(60 72 88 / 0.25)',
-              inner: 'inset 0 2px 4px 0 rgb(60 72 88 / 0.05)',
-              testi: '2px 2px 2px -1px rgb(60 72 88 / 0.15)',
-          },
-
-          fontSize: {
-              base: ['15px', '24px'],
-              menu: ['14px', '24px'],
-          },
-
-          spacing: {
-              0.75: '0.1875rem',
-              3.25: '0.8125rem'
-          },
-
-          height: ({
-              theme
-          }:{theme:any}) => ({
-              '10.5': '2.625rem',
-              '85': '21.25rem',
-          }),
-          width: ({
-              theme
-          }:{theme:any}) => ({
-              '10.5': '2.625rem',
-          }),
-
-          maxWidth: ({
-              theme,
-              breakpoints
-          }:{theme:any,breakpoints:any}) => ({
-              '1200': '71.25rem',
-              '992': '60rem',
-              '768': '45rem',
-          }),
-
-          zIndex: {
-              1: '1',
-              2: '2',
-              3: '3',
-              999: '999',
-          },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.5s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+      },
+    },
   },
+  plugins: [],
+};
 
-  plugins: [
-      require("@tailwindcss/forms")({
-        strategy: 'class', // only generate classes
-      }),
-  ],
-}
-
+export default config;

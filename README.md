@@ -1,36 +1,238 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 FullstackTalent Homepage Clone
 
-## Getting Started
+A pixel-perfect clone of the FullstackTalent homepage built with Next.js 15, React 19 RC, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## ✨ Features
 
+- **Modern Tech Stack**: Next.js 15 + React 19 RC + TypeScript
+- **Beautiful Animations**: Framer Motion for smooth transitions
+- **Fully Responsive**: Mobile-first design approach
+- **Component-Based**: Modular and reusable components
+- **Type-Safe**: Full TypeScript support
+- **Performance Optimized**: Next.js optimizations + CSS optimization
+
+## 🎨 Design Elements
+
+### Navigation
+- Sticky header with dropdown menu
+- Responsive mobile menu
+- Active link highlighting
+- Smooth hover transitions
+
+### Hero Section
+- Gradient badge with animation
+- Large typography with brand colors
+- Stats grid (25K+ alumni, 95% job placement, 500+ partners, 4.9★ rating)
+- Dual CTA buttons
+- Animated dashboard mockup
+- Floating rating and job placement cards
+
+### Career Path Selector
+- Two interactive cards (IT Professional vs Technopreneur)
+- Hover effects and selection states
+- Feature lists with checkmarks
+- Career progression info
+- Bottom CTA section
+
+### Quick Start Options
+- 4 interactive cards
+- Icon-based design
+- Hover animations
+- Direct action buttons
+
+### Success Stories
+- Tab-based navigation (IT Professional, Technopreneur, Impact Statistics)
+- Story cards with testimonials
+- Animated tab transitions
+- Statistics dashboard
+
+### Live Feed
+- Real-time activity feed simulation
+- Community statistics with live updates
+- Trust & recognition section
+- Sticky sidebar on desktop
+
+### Footer
+- Dark theme with 5-column layout
+- Social media links
+- App download buttons
+- Contact information
+- "Made in Indonesia" badge
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. **Install dependencies**:
+```bash
+npm install
+# or
+yarn install
+```
+
+2. **Run the development server**:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Open your browser**:
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+fullstack-talent-homepage/
+├── app/
+│   ├── globals.css          # Global styles & Tailwind
+│   ├── layout.tsx            # Root layout with metadata
+│   └── page.tsx              # Homepage
+├── components/
+│   ├── Navigation.tsx        # Header navigation with dropdown
+│   ├── HeroSection.tsx       # Hero with stats and CTAs
+│   ├── CareerPathSelector.tsx # Career path selection cards
+│   ├── QuickStartOptions.tsx  # Quick start action cards
+│   ├── SuccessStories.tsx    # Tabbed success stories
+│   ├── LiveFeed.tsx          # Activity feed & community stats
+│   └── Footer.tsx            # Footer with links and social
+├── public/                   # Static assets
+├── tailwind.config.ts        # Tailwind configuration
+├── tsconfig.json             # TypeScript configuration
+├── next.config.js            # Next.js configuration
+└── package.json              # Dependencies
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Color Palette
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Primary Blue**: `#2563eb` (blue-600)
+- **Secondary Green**: `#10b981` (green-600)
+- **Dark Background**: `#111827` (gray-900)
+- **Text Primary**: `#111827` (gray-900)
+- **Text Secondary**: `#6b7280` (gray-500)
 
-## Deploy on Vercel
+## 🔤 Typography
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Primary Font**: Inter
+- **Secondary Font**: Plus Jakarta Sans
+- Weights: 300, 400, 500, 600, 700, 800, 900
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎭 Animations
+
+All animations are powered by Framer Motion:
+- Fade in/out transitions
+- Slide up/down effects
+- Scale transformations
+- Stagger animations for lists
+- Hover state transitions
+
+## 📱 Responsive Breakpoints
+
+```css
+sm: 640px   /* Small devices */
+md: 768px   /* Medium devices */
+lg: 1024px  /* Large devices */
+xl: 1280px  /* Extra large devices */
+2xl: 1536px /* 2X Extra large devices */
+```
+
+## 🛠️ Customization
+
+### Changing Colors
+
+Edit `tailwind.config.ts`:
+```typescript
+colors: {
+  primary: {
+    DEFAULT: '#2563eb', // Change this
+    // ... other shades
+  },
+}
+```
+
+### Adding New Sections
+
+1. Create component in `components/` folder
+2. Import in `app/page.tsx`
+3. Add to the component tree
+
+### Modifying Content
+
+All content is hardcoded in components for easy customization:
+- Stats in `HeroSection.tsx`
+- Success stories in `SuccessStories.tsx`
+- Activity feed in `LiveFeed.tsx`
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📦 Dependencies
+
+### Core
+- **Next.js 15**: React framework
+- **React 19 RC**: UI library
+- **TypeScript**: Type safety
+
+### UI & Styling
+- **Tailwind CSS**: Utility-first CSS
+- **Framer Motion**: Animation library
+- **Lucide React**: Icon library
+
+## 🎯 Key Features to Note
+
+1. **Navigation Dropdown**: Hover-activated menu for "Program"
+2. **Career Path Selection**: Interactive cards with state management
+3. **Tabbed Interface**: Success stories with smooth transitions
+4. **Live Updates**: Real-time clock in community stats
+5. **Responsive Design**: Mobile-first approach with breakpoints
+6. **Performance**: Next.js 15 optimizations enabled
+
+## 🐛 Known Issues
+
+- Dashboard image in hero section is a placeholder (gradient simulation)
+- Some company logos in footer may need actual images
+- Mobile menu needs to be implemented (hamburger icon present)
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+vercel
+```
+
+### Other Platforms
+Build the project and deploy the `.next` folder:
+```bash
+npm run build
+```
+
+## 📝 License
+
+This is a clone project for educational purposes.
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📧 Contact
+
+For questions or support, reach out to the FullstackTalent team.
+
+---
+
+**Built with ❤️ using Next.js 15 + React 19 + Tailwind CSS**
