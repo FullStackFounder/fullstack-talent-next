@@ -1,4 +1,4 @@
-# 🚀 FullstackTalent Homepage Clone
+# 🚀 FullstackTalent Web App
 
 A pixel-perfect clone of the FullstackTalent homepage built with Next.js 15, React 19 RC, Tailwind CSS, and Framer Motion.
 

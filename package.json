@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^15.0.0",
     "react": "^19.0.0-rc",
     "react-dom": "^19.0.0-rc",
     "framer-motion": "^11.5.4",
-    "lucide-react": "^0.445.0"
+    "lucide-react": "^0.445.0",
+    "axios": "^1.6.2"
   },
   "devDependencies": {
     "@types/node": "^20",
