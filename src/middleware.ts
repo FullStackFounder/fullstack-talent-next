@@ -55,5 +55,9 @@ export const config = {
      * - public files (public folder)
      */
     '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*|_next).*)',
+    '/dashboard/:path*',
+    '/siswa/:path*',
+    '/tutor/:path*',
+    '/admin/:path*',
   ],
 };
