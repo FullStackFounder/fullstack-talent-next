@@ -72,7 +72,7 @@ export default function Sidebar({ userRole }: SidebarProps) {
       {
         icon: '📚',
         label: 'Kursus Saya',
-        href: '/tutor/courses',
+        href: '/tutor/kursus-saya',
       },
       {
         icon: '👥',
