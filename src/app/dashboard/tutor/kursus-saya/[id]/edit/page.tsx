@@ -240,7 +240,7 @@ export default function EditCoursePage() {
   // Loading state while fetching course data
   if (loading) {
     return (
-      <DashboardLayout role="tutor">
+      <DashboardLayout userRole="tutor">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
@@ -254,7 +254,7 @@ export default function EditCoursePage() {
   // Error state
   if (fetchError) {
     return (
-      <DashboardLayout role="tutor">
+      <DashboardLayout userRole="tutor">
         <div className="max-w-4xl mx-auto py-12">
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 flex items-start gap-3">
             <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
@@ -275,7 +275,7 @@ export default function EditCoursePage() {
   }
 
   return (
-    <DashboardLayout role="tutor">
+    <DashboardLayout userRole="tutor">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center gap-4">
